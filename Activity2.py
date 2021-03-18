@@ -5,6 +5,7 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+randomNum = randrange(0,4)
 
 def change(x, y):
     "Change snake direction."
@@ -35,9 +36,21 @@ def move():
         snake.pop(0)
 
     clear()
-
-    for body in snake:
-        square(body.x, body.y, 9, 'black')
+    if randomNum == 0:
+        for body in snake:
+            square(body.x, body.y, 9, 'black')
+    if randomNum == 1:
+        for body in snake:
+            square(body.x, body.y, 9, 'purple')
+    if randomNum == 2:
+        for body in snake:
+            square(body.x, body.y, 9, 'green')
+    if randomNum == 3:
+        for body in snake:
+            square(body.x, body.y, 9, 'blue')
+    if randomNum == 4:
+        for body in snake:
+            square(body.x, body.y, 9, 'white')
 
     square(food.x, food.y, 9, 'green')
     update()
