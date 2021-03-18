@@ -51,8 +51,23 @@ def move():
     if randomNum == 4:
         for body in snake:
             square(body.x, body.y, 9, 'white')
-
-    square(food.x, food.y, 9, 'green')
+            
+            
+    if randomNum == 0:
+        for body in snake:
+            square(food.x, food.y, 9, 'purple')
+    if randomNum == 1:
+        for body in snake:
+            square(food.x, food.y, 9, 'green')
+    if randomNum == 2:
+        for body in snake:
+            square(food.x, food.y, 9, 'blue')
+    if randomNum == 3:
+        for body in snake:
+            square(food.x, food.y, 9, 'white')
+    if randomNum == 4:
+        for body in snake:
+            square(food.x, food.y, 9, 'black')
     update()
     ontimer(move, 100)
 
